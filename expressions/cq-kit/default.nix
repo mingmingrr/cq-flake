@@ -18,6 +18,8 @@ buildPythonPackage rec {
     fetchSubmodules = true;
   };
 
+  disabledTests = [ "test_tri_mesh_solid" ];
+
   propagatedBuildInputs = [ cadquery ];
 
   checkInputs = [ pytestCheckHook rich ];

@@ -23,7 +23,7 @@ let
   # We need to use an unmodified version number for the dist-utils version so
   # that the version check in cadquery works
   # remember to change version number in dump_symbols.py as well
-  base-version = "7.7.2";
+  base-version = "7.8.1";
   version = "v${base-version}-git-${src.shortRev}";
 
   vtk_main_version = lib.versions.majorMinor vtk.version;
@@ -106,8 +106,8 @@ let
         "${stdenv.cc.cc}/include/c++/${stdenv.cc.version}"
         "${stdenv.cc.cc}/include/c++/${stdenv.cc.version}/${compiler}"
         "${glibc.dev}/include"
-        "${stdenv.cc.cc}/lib/gcc/${compiler}/${stdenv.cc.version}/include-fixed"
-        "${stdenv.cc.cc}/lib/gcc/${compiler}/${stdenv.cc.version}/include"
+        "${stdenv.cc.cc}/lib/gcc/${compiler}/*/include-fixed"
+        "${stdenv.cc.cc}/lib/gcc/${compiler}/*/include"
     ]);
 
     buildPhase = ''

@@ -41,13 +41,11 @@ mkDerivationWith python3Packages.buildPythonApplication {
   qtWrapperArgs = [ "--set QT_QPA_PLATFORM xcb" ];
 
   postFixup = ''
-    wrapQtApp "$out/bin/cq-editor"
+    wrapQtApp "$out/bin/CQ-editor"
   '';
 
   postInstall = ''
     install -Dm644 icons/cadquery_logo_dark.svg $out/share/icons/hicolor/scalable/apps/cadquery.svg
-
-    rm $out/bin/CQ-editor
   '';
 
   checkInputs = with python3Packages; [

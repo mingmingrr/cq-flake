@@ -9,15 +9,15 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     cadquery-src = {
-      url = "github:CadQuery/cadquery/2.4.0";
+      url = "github:CadQuery/cadquery/v2.5.2";
       flake = false;
     };
     cq-editor-src = {
-      url = "github:CadQuery/CQ-editor/4ef178af06d24a53fee87d576f8cada14c0111a3";
+      url = "github:CadQuery/CQ-editor/0.4.0";
       flake = false;
     };
     ocp-src = {
-      url = "github:cadquery/ocp/4b98a5dc79fa900f7429975708f6a8c2e41cecd1";
+      url = "github:cadquery/ocp/7.8.1.2";
       flake = false;
     };
     ocp-stubs-src = {
