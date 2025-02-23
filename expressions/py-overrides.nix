@@ -60,5 +60,7 @@
 
   build123d = self.callPackage ./build123d.nix {};
 
+  bd-warehouse = self.callPackage ./bd-warehouse.nix { };
+
   yacv-server = self.callPackage ./yacv/server.nix {};
 }

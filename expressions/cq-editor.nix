@@ -24,6 +24,7 @@ mkDerivationWith python3Packages.buildPythonApplication {
     cq-kit
     cq-warehouse
     build123d
+    bd-warehouse
     # spyder_3
     spyder
     pathpy
